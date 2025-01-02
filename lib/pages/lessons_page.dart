@@ -12,18 +12,24 @@ class Lesson {
     required this.highScore,
     required this.progress,
     required this.color,
-    required this.image
+    required this.image,
   });
 }
 
-class LessonsScreen extends StatelessWidget {
-  final List<Lesson> lessons = [
+class LessonsScreen extends StatefulWidget {
+  @override
+  _LessonsScreenState createState() => _LessonsScreenState();
+}
+
+class _LessonsScreenState extends State<LessonsScreen> {
+  // Danh sách bài học có thể thay đổi động
+  List<Lesson> lessons = [
     Lesson(title: 'Lesson 1: Say Hello', highScore: '90/100', progress: '3/4', color: Color(0xFFFCD195), image: 'assets/images/bear-4.png'),
-    Lesson(title: 'Lesson 2: Numbers', highScore: '30/100', progress: '1/4', color: Color(0xFFFDCFD2), image :'assets/images/bear-5.png' ),
+    Lesson(title: 'Lesson 2: Numbers', highScore: '30/100', progress: '1/4', color: Color(0xFFFDCFD2), image: 'assets/images/bear-5.png'),
     Lesson(title: 'Lesson 3: Animals', highScore: '0/100', progress: '0/4', color: Color(0xFF6FE9CB), image: 'assets/images/bear-6.png'),
     Lesson(title: 'Lesson 4: Activities', highScore: '0/100', progress: '0/4', color: Color(0xFFAAE3F7), image: 'assets/images/bear-7.png'),
     Lesson(title: 'Lesson 1: Say Hello', highScore: '90/100', progress: '3/4', color: Color(0xFFFCD195), image: 'assets/images/bear-4.png'),
-    Lesson(title: 'Lesson 2: Numbers', highScore: '30/100', progress: '1/4', color: Color(0xFFFDCFD2), image :'assets/images/bear-5.png' ),
+    Lesson(title: 'Lesson 2: Numbers', highScore: '30/100', progress: '1/4', color: Color(0xFFFDCFD2), image: 'assets/images/bear-5.png'),
     Lesson(title: 'Lesson 3: Animals', highScore: '0/100', progress: '0/4', color: Color(0xFF6FE9CB), image: 'assets/images/bear-6.png'),
     Lesson(title: 'Lesson 4: Activities', highScore: '0/100', progress: '0/4', color: Color(0xFFAAE3F7), image: 'assets/images/bear-7.png'),
   ];

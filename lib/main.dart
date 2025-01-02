@@ -11,6 +11,7 @@ class PlayfulEnglishApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: RegisterScreen(),
+      // home: LoginScreen(),
       home: LessonsScreen(),
     );
   }
