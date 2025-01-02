@@ -6,23 +6,6 @@ class VocabularyScreen extends StatefulWidget {
 }
 
 class _VocabularyScreenState extends State<VocabularyScreen> {
-  double _progress = 0.2; // Khởi tạo tiến trình ban đầu
-
-  void _increaseProgress() {
-    setState(() {
-      if (_progress < 1.0) {
-        _progress += 0.2;
-      }
-    });
-  }
-
-  void _decreaseProgress() {
-    setState(() {
-      if (_progress > 0.0) {
-        _progress -= 0.2;
-      }
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +28,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
               child: Stack(
                 children: [
                   FractionallySizedBox(
-                    widthFactor: 0.2,
+                    widthFactor: 0.4,
                     child: Container(
                       decoration: BoxDecoration(
                         color: Color(0xFF8ED7F1),
@@ -55,7 +38,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                   ),
                   Center(
                     child: Text(
-                      '1/5',
+                      '2/5',
                       style: TextStyle(
                         fontSize: 16,
                         color: Color.fromRGBO(0, 0, 0, 0.5),
