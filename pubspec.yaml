@@ -54,6 +54,11 @@ flutter:
   assets:
     - assets/images/bear.png
     - assets/images/bear-2.png
+    - assets/images/bear-3.png
+    - assets/images/bear-4.png
+    - assets/images/bear-5.png
+    - assets/images/bear-6.png
+    - assets/images/bear-7.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
