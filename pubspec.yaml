@@ -59,6 +59,7 @@ flutter:
     - assets/images/bear-5.png
     - assets/images/bear-6.png
     - assets/images/bear-7.png
+    - assets/images/vocabulary-1.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

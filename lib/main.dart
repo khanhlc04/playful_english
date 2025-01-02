@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'pages/login_page.dart';
 import 'pages/register_page.dart';
 import 'pages/lessons_page.dart';
+import 'pages/vocabulary_page.dart';
 
 void main() => runApp(PlayfulEnglishApp());
 
@@ -12,7 +13,8 @@ class PlayfulEnglishApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // home: RegisterScreen(),
       // home: LoginScreen(),
-      home: LessonsScreen(),
+      // home: LessonsScreen(),
+      home: VocabularyScreen(),
     );
   }
 }
