@@ -13,8 +13,8 @@ class PlayfulEnglishApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // home: RegisterScreen(),
       // home: LoginScreen(),
-      // home: LessonsScreen(),
-      home: VocabularyScreen(),
+       home: LessonsScreen(),
+      //home: VocabularyScreen(),
     );
   }
 }
