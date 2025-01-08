@@ -6,27 +6,30 @@ class VocabularyScreen extends StatefulWidget {
 }
 
 class _VocabularyScreenState extends State<VocabularyScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(Icons.arrow_back, color: Colors.black),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-            child: Container(
-              height: 20,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                color: Color(0xFFFCD195),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Stack(
-                children: [
+              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+              child: Container(
+                height: 20,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  color: Color(0xFFFCD195),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Stack(children: [
                   FractionallySizedBox(
                     widthFactor: 0.4,
                     child: Container(
@@ -45,11 +48,11 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                       ),
                     ),
                   ),
-                ]
-              ),
-            )
+                ]),
+              )),
+          SizedBox(
+            height: 30,
           ),
-          SizedBox(height: 30,),
           Center(
             child: Text(
               'Chọn từ đúng',
@@ -60,13 +63,17 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
               ),
             ),
           ),
-          SizedBox(height: 40,),
+          SizedBox(
+            height: 40,
+          ),
           Image.asset(
             'assets/images/vocabulary-1.png',
             fit: BoxFit.contain,
             height: 263,
           ),
-          SizedBox(height: 15,),
+          SizedBox(
+            height: 15,
+          ),
           Center(
             child: Text(
               'Xin Chào',
@@ -76,17 +83,19 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
               ),
             ),
           ),
-          SizedBox(height: 80,),
+          SizedBox(
+            height: 80,
+          ),
           ElevatedButton(
-            onPressed:  () => print('123'),
+            onPressed: () => print('123'),
             style: ElevatedButton.styleFrom(
               backgroundColor: Color(0xFFB2E4F6),
               foregroundColor: Colors.white,
               shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            minimumSize: Size(340, 72),
-            elevation: 2,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              minimumSize: Size(340, 72),
+              elevation: 2,
             ),
             child: Text(
               'Hello',
@@ -96,9 +105,11 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
               ),
             ),
           ),
-          SizedBox(height: 28,),
+          SizedBox(
+            height: 28,
+          ),
           ElevatedButton(
-            onPressed:  () => print('123'),
+            onPressed: () => print('123'),
             style: ElevatedButton.styleFrom(
               backgroundColor: Color(0xFFB2E4F6),
               foregroundColor: Colors.white,
