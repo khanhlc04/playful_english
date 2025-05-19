@@ -1,11 +1,13 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:playful_english/pages/login_page.dart';
 
 class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body:
-        Column(
+      body: SingleChildScrollView( // Dùng SingleChildScrollView để tránh overflow
+        child: Column(
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
@@ -26,6 +28,7 @@ class RegisterScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 70),
+            // TextField Email
             Container(
               width: 370,
               decoration: BoxDecoration(
@@ -52,6 +55,7 @@ class RegisterScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 15),
+            // TextField Tên Người Dùng
             Container(
               width: 370,
               decoration: BoxDecoration(
@@ -78,6 +82,7 @@ class RegisterScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 15),
+            // TextField Mật Khẩu
             Container(
               width: 370,
               decoration: BoxDecoration(
@@ -92,6 +97,7 @@ class RegisterScreen extends StatelessWidget {
                 ],
               ),
               child: TextField(
+                obscureText: true,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.lock, color: Colors.grey),
                   suffixIcon: Icon(Icons.visibility_off, color: Colors.grey),
@@ -105,6 +111,7 @@ class RegisterScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 15),
+            // TextField Xác nhận Mật Khẩu
             Container(
               width: 370,
               decoration: BoxDecoration(
@@ -119,6 +126,7 @@ class RegisterScreen extends StatelessWidget {
                 ],
               ),
               child: TextField(
+                obscureText: true,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.lock, color: Colors.grey),
                   suffixIcon: Icon(Icons.visibility_off, color: Colors.grey),
@@ -132,30 +140,41 @@ class RegisterScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 40),
-            Container(
-              alignment: Alignment.center,
-              height: 40, // Đặt chiều cao của nút là 40px (nếu muốn nút vuông)
-              width: 226,
-              decoration: BoxDecoration(
-                color: Color(0xFF8FD0E8),
-                borderRadius: BorderRadius.circular(17),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    blurRadius: 6,
-                    offset: Offset(0, 3),
+            // Nút Đăng Ký
+            GestureDetector(
+              onTap: () {
+                // Sau khi đăng ký, chuyển sang LoginScreen
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 40,
+                width: 226,
+                decoration: BoxDecoration(
+                  color: Color(0xFF8FD0E8),
+                  borderRadius: BorderRadius.circular(17),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      blurRadius: 6,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Text(
+                  'Đăng Ký',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
                   ),
-                ],
-              ),
-              child: Text(
-                'Đăng Ký',
-                style: TextStyle(
-                  color: Colors.white,  // Màu chữ trắng
-                  fontSize: 20,  // Font size 20
                 ),
               ),
             ),
             SizedBox(height: 70),
+            // RichText: khi bấm "Đăng nhập" cũng chuyển sang LoginScreen
             RichText(
               text: TextSpan(
                 style: TextStyle(
@@ -171,12 +190,21 @@ class RegisterScreen extends StatelessWidget {
                     style: TextStyle(
                       color: Color(0xFF14EAFE),
                     ),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginScreen()),
+                        );
+                      },
                   ),
                 ],
               ),
-            )
+            ),
+            SizedBox(height: 30),
           ],
-        )
+        ),
+      ),
     );
   }
 }

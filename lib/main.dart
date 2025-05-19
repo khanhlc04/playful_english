@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:playful_english/pages/game.dart';
 import 'pages/login_page.dart';
 import 'pages/register_page.dart';
 import 'pages/lessons_page.dart';
-import 'pages/vocabulary_page.dart';
-import 'pages/vocabularyList_page.dart';
+import 'pages/exercise.dart';
+import 'pages/study_page.dart';
 import 'pages/lessonsDetail_page.dart';
 import 'pages/challengeComplete_page.dart';
 
@@ -15,11 +16,12 @@ class PlayfulEnglishApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: RegisterScreen(),
-      // home: LoginScreen(),
+      home: LoginScreen(),
       // home: LessonsScreen(),
       // home: VocabularyScreen(),
-      home: ChallengeCompleteScreen(),
+      // home: ChallengeCompleteScreen(),
       // home: VocabularyListScreen(),
+      // home: SupermarketChallenge()
     );
   }
 }

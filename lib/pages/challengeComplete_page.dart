@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:playful_english/models/lesson.dart';
+import 'package:playful_english/pages/lessonsDetail_page.dart';
+import 'package:playful_english/pages/lessons_page.dart';
 
 class ChallengeCompleteScreen extends StatelessWidget {
+  final int correctCount;
+  final int totalQuestions;
+  final Lesson lesson;
+
+  const ChallengeCompleteScreen({
+    Key? key,
+    required this.correctCount,
+    required this.totalQuestions,
+    required this.lesson
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +68,8 @@ class ChallengeCompleteScreen extends StatelessWidget {
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 39, vertical: 42),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 39, vertical: 42),
                       child: Image.asset(
                         'assets/images/celebration-1.png',
                         fit: BoxFit.contain,
@@ -102,18 +117,7 @@ class ChallengeCompleteScreen extends StatelessWidget {
                       SizedBox(height: 15),
                       Center(
                         child: Text(
-                          'Time : 01:15',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black.withOpacity(0.8),
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      SizedBox(height: 17),
-                      Center(
-                        child: Text(
-                          'High Score: 15/25',
+                          'Score: $correctCount/$totalQuestions',
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.black.withOpacity(0.8),
@@ -134,7 +138,13 @@ class ChallengeCompleteScreen extends StatelessWidget {
                 SizedBox(height: 30),
                 GestureDetector(
                   onTap: () {
-                    print("Nút Hoàn thành đã được bấm!");
+                    // Khi bấm nút "Hoàn thành", chuyển về LessonsScreen
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LessonDetailScreen(lesson: lesson),
+                      ),
+                    );
                   },
                   child: Container(
                     width: 310,

@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  video_player: ^2.9.3
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +46,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_tts: ^4.2.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -64,6 +66,30 @@ flutter:
     - assets/images/horse-2.png
     - assets/images/celebration-1.png
     - assets/images/celebration-2.png
+    - assets/images/turtle.jpg
+    - assets/images/rabbit.jpg
+    - assets/images/dog.jpg
+    - assets/images/cat.jpg
+    - assets/images/elephant.jpg
+    - assets/images/lion.jpg
+    - assets/images/tiger.jpg
+    - assets/images/monkey.jpg
+    - assets/images/giraffe.jpg
+    - assets/images/zebra.jpg
+    - assets/images/horse.jpg
+    - assets/images/cow.jpg
+    - assets/images/sheep.jpg
+    - assets/images/pig.jpg
+    - assets/images/duck.jpg
+    - assets/images/frog.jpg
+    - assets/images/fish.jpg
+    - assets/images/chicken.jpg
+    - assets/images/goat.jpg
+    - assets/images/bear.jpg
+    - assets/images/AAnThe.jpg
+    - assets/images/jungle.jpg
+    - assets/images/apple.png
+    - assets/videos/tortoise_hare.mp4
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
